@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: JetBrains Mono;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 0.8rem;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 1rem;
+    background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    background: var(--paragraph);
+}
+
+body {
+    overflow: hidden;
+}
+
+.background {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.logo a {
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.cabeçalho {
+    display: flex;
+    gap: 3rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.cabeçalho a {
+    color: #bbb;
+    font-size: 12px;
+}
+
+.cabeçalho a:hover {
+    color: #fff;
+    transition: 0.3s all;
+}
+
+.redes { 
+    display: flex;
+    gap: 10px;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.redes a {
+    color: #bbb;
+    font-size: 22px;
+    margin-top: 3px;
+}
+
+.redes a:hover {
+    margin-top: 0;
+    transition: 500ms;
+}
+
+.redes a.fa-brands.fa-instagram:hover {
+    color: #DD2A7B;
+}
+
+.redes a.fa-brands.fa-github:hover {
+    color: #fff;
+}
+
+.redes a.fa-regular.fa-envelope:hover {
+    color: #EA4335;
+}
+
+.redes a.fa-brands.fa-linkedin-in:hover {
+    color: #0A66C2;
+}
