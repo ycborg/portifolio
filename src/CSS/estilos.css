@@ -11,22 +11,8 @@ html {
     scroll-behavior: smooth;
 }
 
-::-webkit-scrollbar {
-    width: 0.8rem;
-}
-
-::-webkit-scrollbar-track {
-    border-radius: 1rem;
-    background: var(--bg-color);
-}
-
-::-webkit-scrollbar-thumb {
-    border-radius: 1rem;
-    background: var(--paragraph);
-}
-
 body {
-    overflow: hidden;
+    overflow-y: scroll;
 }
 
 .background {
@@ -34,13 +20,16 @@ body {
 }
 
 header {
+    background-color: rgba(3, 3, 3, 0.6);
     display: flex;
     justify-content: space-around;
-    max-width: 100%;
     align-items: center;
     text-align: center;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
 }
 
 .logo a {
@@ -65,6 +54,18 @@ header {
 .cabeçalho a:hover {
     color: #fff;
     transition: 0.3s all;
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        justify-content: space-between;
+        padding: 10px;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+    }
+    .cabeçalho {
+        display: none;
+    }
 }
 
 .redes { 
@@ -99,4 +100,24 @@ header {
 
 .redes a.fa-brands.fa-linkedin-in:hover {
     color: #0A66C2;
+}
+
+.home {
+    background-color: #476;
+    height: 500px;
+}
+
+.sobre {
+    background-color: #333;
+    height: 500px;
+}
+
+.serviços {
+    background-color: #555;
+    height: 500px;
+}
+
+.trabalho {
+    background-color: #777;
+    height: 500px;
 }
