@@ -4,120 +4,169 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
-    font-family: JetBrains Mono;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    overflow-y: scroll;
-}
-
-.background {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-}
+/* CABECALHO */
 
 header {
     background-color: rgba(3, 3, 3, 0.6);
+    backdrop-filter: blur(4px);
     display: flex;
     justify-content: space-around;
     align-items: center;
-    text-align: center;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding: 1rem 3rem;
     position: fixed;
     width: 100%;
     z-index: 1000;
+    font-family: JetBrains Mono;
 }
 
-.logo a {
+header .logo a {
     color: #fff;
     font-size: 28px;
     cursor: pointer;
     font-weight: 500;
 }
 
-.cabeçalho {
+header .cabecalho {
     display: flex;
     gap: 3rem;
     font-weight: 500;
     cursor: pointer;
 }
 
-.cabeçalho a {
+header .cabecalho li a {
     color: #bbb;
     font-size: 12px;
+    transition: 0.3s ease;
 }
 
-.cabeçalho a:hover {
+header .cabecalho li a:hover {
     color: #fff;
-    transition: 0.3s all;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 750px) {
     header {
-        justify-content: space-between;
-        padding: 10px;
-        padding-bottom: 1rem;
-        padding-top: 1rem;
+        padding: 1rem;
     }
-    .cabeçalho {
+    header .cabecalho {
         display: none;
     }
 }
 
-.redes { 
+header .redes { 
     display: flex;
     gap: 10px;
     font-weight: 300;
     cursor: pointer;
 }
 
-.redes a {
+header .redes li a {
     color: #bbb;
     font-size: 22px;
     margin-top: 3px;
+    transition: 500ms ease;
 }
 
-.redes a:hover {
+header .redes li a:hover {
     margin-top: 0;
-    transition: 500ms;
+    transform: scale(1.15);
 }
 
-.redes a.fa-brands.fa-instagram:hover {
+header .redes li a.fa-brands.fa-instagram:hover {
     color: #DD2A7B;
 }
 
-.redes a.fa-brands.fa-github:hover {
+header .redes li a.fa-brands.fa-github:hover {
     color: #fff;
 }
 
-.redes a.fa-regular.fa-envelope:hover {
+header .redes li a.fa-regular.fa-envelope:hover {
     color: #EA4335;
 }
 
-.redes a.fa-brands.fa-linkedin-in:hover {
+header .redes li a.fa-brands.fa-linkedin-in:hover {
     color: #0A66C2;
 }
 
-.home {
-    background-color: #476;
+/* INICIO */
+
+main .inicio {
+    background-color: #090909;
     height: 500px;
 }
 
-.sobre {
-    background-color: #333;
+/* SOBRE */
+
+main .sobre {
+    background-color: #151515;
+    height: auto;
+}
+
+main .eu {
+    display: flex;
+    padding: 5.5rem;
+    align-items: center;
+    gap: 10%;
+    text-align: left;
+    padding-left: 20%;
+    padding-right: 15%;
+}
+
+@media screen and (max-width: 900px) {
+    main .eu {
+        flex-direction: column-reverse;
+        padding-right: 20%;
+        text-align: center;
+        gap: 50px;
+    }
+}
+
+main .foto :hover {
+    transition: 0.7s ease;
+    transform: scale(1.04);
+}
+
+main .foto img {
+    max-width: 300px;
+    box-shadow: 0 0 2rem black;
+    border-radius: 25px;
+    transition: 0.5s ease;
+}
+
+main .texto {
+    font-family: poppins;
+}
+
+main .texto h1 {
+    font-size: 35px;
+    color: #fff;
+    font-weight: 500;
+}
+
+main .texto h3 {
+    font-size: 14px;
+    color: #bbb;
+    font-weight: 390;
+}
+
+/* SERVICOS */
+
+main .servicos {
+    background-color: #090909;
     height: 500px;
 }
 
-.serviços {
-    background-color: #555;
+/* TRABALHO */
+
+main .trabalho {
+    background-color: #151515;
     height: 500px;
 }
 
-.trabalho {
-    background-color: #777;
-    height: 500px;
+/* RODAPE */
+
+main .rodape {
+    background-color: #090909;
+    height: 150px;
 }
