@@ -1,5 +1,5 @@
 * {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
@@ -10,7 +10,7 @@
 
 header {
     background-color: rgba(3, 3, 3, 0.6);
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(6px);
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -30,7 +30,7 @@ header .logo a {
 
 header .cabecalho {
     display: flex;
-    gap: 3rem;
+    gap: 2.0rem;
     font-weight: 500;
     cursor: pointer;
 }
@@ -42,16 +42,7 @@ header .cabecalho li a {
 }
 
 header .cabecalho li a:hover {
-    color: #fff;
-}
-
-@media screen and (max-width: 750px) {
-    header {
-        padding: 1rem;
-    }
-    header .cabecalho {
-        display: none;
-    }
+    color: #1F6FEB;
 }
 
 header .redes { 
@@ -73,6 +64,15 @@ header .redes li a:hover {
     transform: scale(1.15);
 }
 
+@media screen and (max-width: 750px) {
+    header {
+        padding: 1rem;
+    }
+    header .cabecalho {
+        display: none;
+    }
+}
+
 header .redes li a.fa-brands.fa-instagram:hover {
     color: #DD2A7B;
 }
@@ -92,7 +92,7 @@ header .redes li a.fa-brands.fa-linkedin-in:hover {
 /* INICIO */
 
 main .inicio {
-    background-color: #090909;
+    background-color: #101010;
     height: 500px;
 }
 
@@ -105,21 +105,12 @@ main .sobre {
 
 main .eu {
     display: flex;
-    padding: 5.5rem;
+    padding: 6.5rem;
     align-items: center;
     gap: 10%;
     text-align: left;
     padding-left: 20%;
     padding-right: 15%;
-}
-
-@media screen and (max-width: 900px) {
-    main .eu {
-        flex-direction: column-reverse;
-        padding-right: 20%;
-        text-align: center;
-        gap: 50px;
-    }
 }
 
 main .foto :hover {
@@ -128,8 +119,8 @@ main .foto :hover {
 }
 
 main .foto img {
-    max-width: 300px;
-    box-shadow: 0 0 2rem black;
+    max-width: 290px;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.8);
     border-radius: 25px;
     transition: 0.5s ease;
 }
@@ -138,35 +129,123 @@ main .texto {
     font-family: poppins;
 }
 
-main .texto h1 {
-    font-size: 35px;
-    color: #fff;
+main .sobre .texto h1 {
+    font-size: 30px;
+    color: #1F6FEB;
     font-weight: 500;
+    padding-top: 1.5rem;
 }
 
-main .texto h3 {
+main .texto p {
     font-size: 14px;
     color: #bbb;
     font-weight: 390;
 }
 
+@media screen and (max-width: 900px) {
+    main .eu {
+        flex-direction: column-reverse;
+        padding: 4rem;
+        text-align: center;
+        gap: 50px;
+    }
+    main .foto img {
+        max-width: 250px;
+    }
+    main .texto p {
+        padding-inline: 5%;
+    }
+}
+
 /* SERVICOS */
 
 main .servicos {
-    background-color: #090909;
+    background-color: #101010;
     height: 500px;
 }
 
-/* TRABALHO */
+/* CONHECIMENTOS */
 
-main .trabalho {
+main .conhecimentos {
     background-color: #151515;
-    height: 500px;
+    height: auto;
 }
 
-/* RODAPE */
+main .conhecimentos .titulo {
+    text-align: center;
+    padding-top: 5.5rem;
+    font-size: 30px;
+    font-weight: 500;
+    color: #1F6FEB;
+    font-family: poppins;
+}
 
-main .rodape {
-    background-color: #090909;
+main .tecnologias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 3rem 15%;
+}
+
+main .tecnologias li {
+    background-color: #101010;
+    border-radius: 25px;
+    box-shadow: -4px 7px 6px  rgba(0, 0, 0, 0.8);;
+    padding: 1rem;
+    transition: 0.3s ease-in-out;
+}
+
+main .tecnologias li:hover {
+    transform: scale(1.04);
+}
+
+main .conhecimentos .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 12rem;
+    height: 12rem;
+}
+
+main .conhecimentos .descricao {
+    color: #bbb;
+    font-family: poppins;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 370;
+    overflow-y: scroll;
+}
+
+main .conhecimentos h1 {
+    font-size: 25px;
+    font-family: JetBrains Mono;
+    color: #fff;
+}
+
+
+main .conhecimentos img {
+    width: 60px;
+    margin: 10px;
+    filter: grayscale(100%);
+    transition: 0.3s ease-in-out;
+}
+
+main .info .githubicon {
+    filter: invert(20%);
+}
+
+main .conhecimentos .tecnologias li:hover .info img {
+    filter: grayscale(0%);
+}
+
+main .conhecimentos .tecnologias li:hover .info .githubicon {
+    filter: invert(90%);
+}
+
+/* FALE COMIGO */
+
+.falecomigo {
+    background-color: #101010;
     height: 150px;
 }
