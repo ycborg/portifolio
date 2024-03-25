@@ -6,6 +6,10 @@
     list-style: none;
 }
 
+span {
+    color: #1F6FEB;
+}
+
 /* CABECALHO */
 
 header {
@@ -26,19 +30,21 @@ header .logo a {
     font-size: 28px;
     cursor: pointer;
     font-weight: 500;
+    font-style: italic;
 }
 
 header .cabecalho {
     display: flex;
-    gap: 2.0rem;
+    gap: 2.2rem;
     font-weight: 500;
     cursor: pointer;
 }
 
 header .cabecalho li a {
     color: #bbb;
-    font-size: 12px;
+    font-size: 11px;
     transition: 0.3s ease;
+    font-family: poppins;
 }
 
 header .cabecalho li a:hover {
@@ -73,19 +79,19 @@ header .redes li a:hover {
     }
 }
 
-header .redes li a.fa-brands.fa-instagram:hover {
+a.fa-brands.fa-instagram:hover {
     color: #DD2A7B;
 }
 
-header .redes li a.fa-brands.fa-github:hover {
+a.fa-brands.fa-github:hover {
     color: #fff;
 }
 
-header .redes li a.fa-regular.fa-envelope:hover {
+a.fa-regular.fa-envelope:hover {
     color: #EA4335;
 }
 
-header .redes li a.fa-brands.fa-linkedin-in:hover {
+a.fa-brands.fa-linkedin-in:hover {
     color: #0A66C2;
 }
 
@@ -93,7 +99,60 @@ header .redes li a.fa-brands.fa-linkedin-in:hover {
 
 main .inicio {
     background-color: #101010;
-    height: 500px;
+    height: auto;
+}
+
+main .inicio .informacoes {
+    display: flex;
+    align-items: center;
+    padding: 12rem;
+    padding-inline: 8%;
+    font-family: poppins;
+}
+
+main .inicio h4 {
+    color: #1F6FEB;
+}
+
+main .inicio h1 {
+    color: #fff;
+    font-size: 35px;
+}
+
+main .inicio p {
+    color: #bbb;
+    font-size: 15px; 
+    padding-bottom: 35px;
+}
+
+main .inicio .button {
+    color: #1F6FEB;
+    border-style: solid;
+    border-color: #1F6FEB;
+    padding: 0.5rem 1rem;
+    font-size: 12px;
+    font-weight: 700;
+    transition: 0.3s ease-in-out;
+}
+
+main .inicio img {
+    max-width: 350px;
+}
+
+@media screen and (max-width: 900px) {
+    main .inicio .informacoes {
+        flex-direction: column;
+        padding: 17rem 3rem;
+    }
+    main .inicio img {
+        display: none;
+    }
+}
+
+main .inicio .button:hover {
+    background-color: #1F6FEB;
+    color: #fff;
+    cursor: pointer;
 }
 
 /* SOBRE */
@@ -111,6 +170,10 @@ main .eu {
     text-align: left;
     padding-left: 20%;
     padding-right: 15%;
+}
+
+main .foto {
+    margin: 20px;
 }
 
 main .foto :hover {
@@ -131,7 +194,7 @@ main .texto {
 
 main .sobre .texto h1 {
     font-size: 30px;
-    color: #1F6FEB;
+    color: #fff;
     font-weight: 500;
     padding-top: 1.5rem;
 }
@@ -157,11 +220,58 @@ main .texto p {
     }
 }
 
-/* SERVICOS */
+/* PROJETOS */
 
-main .servicos {
+main .projetos {
     background-color: #101010;
-    height: 500px;
+    height: auto;
+}
+
+main .projetos .titulo {
+    text-align: center;
+    padding-top: 5.5rem;
+    font-size: 30px;
+    font-weight: 500;
+    color: #fff;
+    font-family: poppins;
+}
+
+main .trabalhos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+    padding: 3rem 15%;
+}
+
+main .trabalhos .trabalho {
+    background-color: #151515;
+    width: 21.5rem;
+    height: 17rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: -4px 7px 6px  rgba(0, 0, 0, 0.8);
+    transition: 0.4s ease-in-out;
+}
+
+main .trabalho h1 {
+    text-align: center;
+    padding-bottom: 1rem;
+    font-family: JetBrains Mono;
+    font-size: 15px;
+    color: #fff;
+}
+
+main .video img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+main .trabalho:hover {
+    transform: scale(1.04);
+    cursor: pointer;
 }
 
 /* CONHECIMENTOS */
@@ -176,36 +286,34 @@ main .conhecimentos .titulo {
     padding-top: 5.5rem;
     font-size: 30px;
     font-weight: 500;
-    color: #1F6FEB;
+    color: #fff;
     font-family: poppins;
+    padding-inline: 1.5rem;
 }
 
 main .tecnologias {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    justify-content: center;
     padding: 3rem 15%;
 }
 
-main .tecnologias li {
+main .tecnologias .info {
     background-color: #101010;
-    border-radius: 25px;
-    box-shadow: -4px 7px 6px  rgba(0, 0, 0, 0.8);;
+    width: 12rem;
+    height: 15rem;
     padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 18px;
+    box-shadow: -4px 7px 6px  rgba(0, 0, 0, 0.8);
     transition: 0.3s ease-in-out;
+    margin: 20px 24px;
 }
 
 main .tecnologias li:hover {
     transform: scale(1.04);
-}
-
-main .conhecimentos .info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 12rem;
-    height: 12rem;
 }
 
 main .conhecimentos .descricao {
@@ -227,25 +335,134 @@ main .conhecimentos h1 {
 main .conhecimentos img {
     width: 60px;
     margin: 10px;
-    filter: grayscale(100%);
-    transition: 0.3s ease-in-out;
+    transition: 0.2s ease-in-out;
 }
 
 main .info .githubicon {
-    filter: invert(20%);
-}
-
-main .conhecimentos .tecnologias li:hover .info img {
-    filter: grayscale(0%);
-}
-
-main .conhecimentos .tecnologias li:hover .info .githubicon {
-    filter: invert(90%);
+    filter: invert(100%);
 }
 
 /* FALE COMIGO */
 
 .falecomigo {
     background-color: #101010;
-    height: 150px;
+    height: auto;
+}
+
+footer ul {
+    display: flex;
+    align-items: center;
+    padding: 5.5rem;
+}
+
+footer .contato {
+    font-family: poppins;
+}
+
+footer .contato div {
+    padding: 4px;
+}
+
+footer .contato h1 {
+    color: #fff;
+    font-size: 35px;
+}
+
+footer a {
+    color: #bbb;
+    font-size: 15px; 
+    padding: 3px 10px;
+    transition: 0.3s ease-in-out;
+}
+
+footer h4 {
+    color: #1F6FEB;
+}
+
+footer .whatsapp {
+    color: #1F6FEB;
+    border-style: solid;
+    border-color: #1F6FEB;
+    padding: 0.5rem 1rem;
+    font-size: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+footer .fa-brands.fa-whatsapp {
+    transition: 0.3s ease-in-out;
+}
+
+footer .contato a:hover {
+    background-color: #222;
+    border-radius: 50px;
+}
+
+footer .contato .whatsapp:hover {
+    background-color: #1F6FEB;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 0;
+}
+
+footer .whatsapp:hover .fa-brands.fa-whatsapp {
+    color: #fff;
+}
+
+footer img {
+    max-width: 300px;
+    filter: invert(100%);
+}
+
+@media screen and (max-width: 900px) {
+    footer ul {
+        flex-direction: column;
+        padding-inline: 2rem;
+    }
+}
+
+footer .separacao {
+    height: 1px;
+    max-width: 900px;
+    background-color: #bbb;
+}
+
+footer .rodape {
+    height: auto;
+    background-color: #101010;
+    display: flex;
+    align-items: center;
+    padding-inline: 3rem;
+    gap: 30px;
+}
+
+footer .rdpa .logo {
+    color: #fff;
+    font-size: 13px;
+    cursor: pointer;
+    font-weight: 500;
+    font-style: italic;
+    font-family: JetBrains Mono;
+}
+
+footer .rdpa p {
+    color: #bbb;
+    font-size: 15px;
+}
+
+footer .redes {
+    display: flex;
+    flex-direction: row;
+    font-weight: 300;
+    cursor: pointer;
+    padding-inline: 0;
+}
+
+footer .redes li a {
+    color: #bbb;
+    font-size: 20px;
+    transition: 500ms ease;
+}
+
+footer .redes li a:hover {
+    transform: scale(1.10);
 }
